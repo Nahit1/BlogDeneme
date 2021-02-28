@@ -6,7 +6,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ProgrammersBlog.Data.Concrete.EntityFramework.Contexts;
+using ProgrammersBlog.Services.AutoMapper.Profiles;
 using ProgrammersBlog.Services.Extensions;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace ProgrammersBlog.Mvc
 {
@@ -26,8 +29,12 @@ namespace ProgrammersBlog.Mvc
                 options.UseSqlServer(
                     Configuration.GetConnectionString("ProgrammersConnection")));
 
-            services.AddControllersWithViews().AddRazorRuntimeCompilation();
-            services.AddAutoMapper(typeof(Startup));
+            services.AddControllersWithViews().AddRazorRuntimeCompilation().AddJsonOptions(opt=> {
+
+                opt.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+                opt.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+            });
+            services.AddAutoMapper(typeof(CategoryProfile), typeof(ArticleProfile));
             services.LoadMyServices();
         }
 

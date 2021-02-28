@@ -31,7 +31,8 @@ namespace ProgrammersBlog.Services.Concrete
             article.ModifiedByName = createdBName;
             article.UserId = 1;
 
-            await _unitOfWork.Articles.AddAsync(article).ContinueWith(t => _unitOfWork.SaveAsync());
+            await _unitOfWork.Articles.AddAsync(article);
+            await _unitOfWork.SaveAsync();
 
             return new Result(ResultStatus.Success, $"{articleAddDto.Title} başarıyla kayıt edildi.");
         }
@@ -46,7 +47,8 @@ namespace ProgrammersBlog.Services.Concrete
                 article.ModifiedByName = modifiedByName;
                 article.ModifiedDate = DateTime.Now;
 
-                await _unitOfWork.Articles.UpdateAsync(article).ContinueWith(t => _unitOfWork.SaveAsync());
+                await _unitOfWork.Articles.UpdateAsync(article);
+                await _unitOfWork.SaveAsync();
                 return new Result(ResultStatus.Success, $"{article.Title} başarıyla silinmiştir..");
             }
 
@@ -147,7 +149,8 @@ namespace ProgrammersBlog.Services.Concrete
             if (result)
             {
                 var article = await _unitOfWork.Articles.GetAsync(a => a.Id == articleId);
-                await _unitOfWork.Articles.DeleteAsync(article).ContinueWith(t => _unitOfWork.SaveAsync());
+                await _unitOfWork.Articles.DeleteAsync(article);
+                await _unitOfWork.SaveAsync();
                 return new Result(ResultStatus.Success, $"{article.Title} başarıyla veritabanından silinmiştir..");
             }
 
@@ -159,7 +162,8 @@ namespace ProgrammersBlog.Services.Concrete
             var article = _mapper.Map<Article>(articleUpdateDto);
             article.ModifiedByName = modifiedByName;
 
-            await _unitOfWork.Articles.UpdateAsync(article).ContinueWith(t => _unitOfWork.SaveAsync());
+            await _unitOfWork.Articles.UpdateAsync(article);
+            await _unitOfWork.SaveAsync();
             return new Result(ResultStatus.Success, $"{articleUpdateDto.Title} başarıyla güncellendi.");
         }
     }
