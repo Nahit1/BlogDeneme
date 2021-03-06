@@ -45,72 +45,72 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Mappings
 
             builder.ToTable("Articles");
 
-            builder.HasData(new Article
-            {
-                Id = 1,
-                CategoryId = 1,
-                Title = "C# 9.0 ve .NET 5 Yenilikler",
-                Content = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                Thumbnail ="Default.jpg",
-                SeoDescription = "C# 9.0 ve .NET 5 Yenilikler",
-                SeoTags = "C#, C#9, .NET5",
-                SeoAuthor = "Nahit Ferhat Ektaş",
-                Date = DateTime.Now,
-                IsActive = true,
-                IsDeleted = false,
-                CreatedDate = DateTime.Now,
-                ModifiedByName = "InitialCreate",
-                ModifiedDate = DateTime.Now,
-                Note = "C# Blog Kategorisi",
-                UserId = 1,
-                ViewCount = 120,
-                CommentCount = 1
+            //builder.HasData(new Article
+            //{
+            //    Id = 1,
+            //    CategoryId = 1,
+            //    Title = "C# 9.0 ve .NET 5 Yenilikler",
+            //    Content = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            //    Thumbnail ="Default.jpg",
+            //    SeoDescription = "C# 9.0 ve .NET 5 Yenilikler",
+            //    SeoTags = "C#, C#9, .NET5",
+            //    SeoAuthor = "Nahit Ferhat Ektaş",
+            //    Date = DateTime.Now,
+            //    IsActive = true,
+            //    IsDeleted = false,
+            //    CreatedDate = DateTime.Now,
+            //    ModifiedByName = "InitialCreate",
+            //    ModifiedDate = DateTime.Now,
+            //    Note = "C# Blog Kategorisi",
+            //    UserId = 1,
+            //    ViewCount = 120,
+            //    CommentCount = 1
 
-            },
-            new Article
-            {
-                Id = 2,
-                CategoryId = 2,
-                Title = "C++ 9.0 ve .NET 5 Yenilikler",
-                Content = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                Thumbnail = "Default.jpg",
-                SeoDescription = "C++ 9.0 ve .NET 5 Yenilikler",
-                SeoTags = "C#, C#9, .NET5",
-                SeoAuthor = "Nahit Ferhat Ektaş",
-                Date = DateTime.Now,
-                IsActive = true,
-                IsDeleted = false,
-                CreatedDate = DateTime.Now,
-                ModifiedByName = "InitialCreate",
-                ModifiedDate = DateTime.Now,
-                Note = "C++ 9.0 ve .NET 5 Yenilikler",
-                UserId = 1,
-                ViewCount =100,
-                CommentCount = 1
+            //},
+            //new Article
+            //{
+            //    Id = 2,
+            //    CategoryId = 2,
+            //    Title = "C++ 9.0 ve .NET 5 Yenilikler",
+            //    Content = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            //    Thumbnail = "Default.jpg",
+            //    SeoDescription = "C++ 9.0 ve .NET 5 Yenilikler",
+            //    SeoTags = "C#, C#9, .NET5",
+            //    SeoAuthor = "Nahit Ferhat Ektaş",
+            //    Date = DateTime.Now,
+            //    IsActive = true,
+            //    IsDeleted = false,
+            //    CreatedDate = DateTime.Now,
+            //    ModifiedByName = "InitialCreate",
+            //    ModifiedDate = DateTime.Now,
+            //    Note = "C++ 9.0 ve .NET 5 Yenilikler",
+            //    UserId = 1,
+            //    ViewCount =100,
+            //    CommentCount = 1
                 
-            },
-            new Article
-            {
-                Id = 3,
-                CategoryId = 3,
-                Title = "JavaScript 9.0 ve .NET 5 Yenilikler",
-                Content = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                Thumbnail = "Default.jpg",
-                SeoDescription = "JavaScript ve .NET 5 Yenilikler",
-                SeoTags = "JavaScript, C#9, .NET5",
-                SeoAuthor = "Nahit Ferhat Ektaş",
-                Date = DateTime.Now,
-                IsActive = true,
-                IsDeleted = false,
-                CreatedDate = DateTime.Now,
-                ModifiedByName = "InitialCreate",
-                ModifiedDate = DateTime.Now,
-                Note = "C++ 9.0 ve .NET 5 Yenilikler",
-                UserId = 1,
-                ViewCount = 150,
-                CommentCount = 1
-            }
-            );
+            //},
+            //new Article
+            //{
+            //    Id = 3,
+            //    CategoryId = 3,
+            //    Title = "JavaScript 9.0 ve .NET 5 Yenilikler",
+            //    Content = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            //    Thumbnail = "Default.jpg",
+            //    SeoDescription = "JavaScript ve .NET 5 Yenilikler",
+            //    SeoTags = "JavaScript, C#9, .NET5",
+            //    SeoAuthor = "Nahit Ferhat Ektaş",
+            //    Date = DateTime.Now,
+            //    IsActive = true,
+            //    IsDeleted = false,
+            //    CreatedDate = DateTime.Now,
+            //    ModifiedByName = "InitialCreate",
+            //    ModifiedDate = DateTime.Now,
+            //    Note = "C++ 9.0 ve .NET 5 Yenilikler",
+            //    UserId = 1,
+            //    ViewCount = 150,
+            //    CommentCount = 1
+            //}
+            //);
         }
     }
 }
